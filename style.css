@@ -211,6 +211,7 @@ height: 30px;
 #experience{
   padding-top: 15vh;
   position: relative;
+  height: 110vh;
 }
 .skill:hover{
   transform: scale(1.3);
