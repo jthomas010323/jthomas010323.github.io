@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 4</title>
+  </head>
+  <body></body>
+  <script>
+    alert("Welcome to the store");
+    let userName = prompt("Enter your name:");
+    let now = new Date();
+    let timeOfDay = "";
+    if (now.getHours() < 12) {
+      timeOfDay = "Morning";
+    } else if (now.getHours() < 18) {
+      timeOfDay = "Afternoon";
+    } else {
+      timeOfDay = "Evening";
+    }
+    let itemSelected = prompt(
+      `Good ${timeOfDay} ${userName}, what item do you want to buy?:`
+    );
+    let numberOfItems = prompt(`How many ${itemSelected}'s do you want:`);
+
+    let deliveryDate = new Date(now);
+    deliveryDate.setDate(now.getDate() + 7);
+    let deliveryDateString = deliveryDate.toLocaleDateString("en-US");
+
+    while (!(numberOfItems < 99 && numberOfItems > 1)) {
+      numberOfItems = prompt(
+        `How much ${itemSelected}'s do you want. Must be between 1-99:`
+      );
+    }
+    alert(
+      `Hello ${userName}, you have ordered ${numberOfItems} ${itemSelected}'s.`
+    );
+    alert("Your order should arrive at " + deliveryDateString + "!");
+
+    document.writeln(
+      `Good ${timeOfDay} ${userName}, you have ordered ${numberOfItems} ${itemSelected}'s.<br>`
+    );
+    document.writeln("Your order should arrive at " + deliveryDateString + "!");
+  </script>
+</html>
