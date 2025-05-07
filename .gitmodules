@@ -1,0 +1,3 @@
+[submodule "bibleapp"]
+	path = bibleapp
+	url = https://github.com/jthomas010323/bibleapp.git
